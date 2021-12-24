@@ -49,7 +49,7 @@ class BlackScholes:
     def increase(self, paths):
         return paths[:,1:,]-paths[:,0:-1]
         
-    def tradingReturn(self, hedge,paths):
+    def tradingReturn(self, hedge, paths):
         return np.sum(hedge*self.increase(paths),axis=1)
     
         
